@@ -1,0 +1,32 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>National Park Geek</title>
+    <c:url value="/css/site.css" var="cssHref" />
+    <link rel="stylesheet" href="${cssHref}">
+</head>
+
+<body>
+<div class = "headerBody">
+<c:url var="survey" value="/surveyPage" />
+<c:url var ="favoriteParks" value ="/favoriteParks"/>
+
+<header>
+    		<c:url value="/" var="homePageHref" />
+    		<c:url value="/img/logo.png" var="logoSrc" />
+        <a href="${homePageHref}">
+        		<img src="${logoSrc}" alt="National Park Geek Logo" id="logo"/>
+        </a>
+</header>
+
+<nav>
+        <ul>
+        	<li><a href="${homePageHref}">Home</a>
+            <li><a href="${survey}">Survey</a></li>
+            <li><a href="${favoriteParks}">Favorite Parks</a></li>           
+        </ul>
+        </nav>
+</div>
